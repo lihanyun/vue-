@@ -66,7 +66,7 @@
         background-color: burlywood;
     }
 }
-ul{
+.mui-table-view .mui-grid-view .mui-grid-6{
 background-color: white;
 border: 0;
 outline: none;
@@ -98,18 +98,18 @@ export default {
     methods:{
 
 
-        // getLunbotu(){
-        //     this.$http.get("http://vue.studyit.io/api/getlunbo" ).then(result=>{
-        //         var result=result.body
-        //         if (result.status===0){
-        //             this.lunbolist=result.message
-        //             Toast('加载轮播图成功')
-        //         }
-        //         else{
-        //            Toast('加载轮播图失败')
-        //         }
-        //     })
-        // }
+        getLunbotu(){
+            this.$http.get("http://vue.studyit.io/api/getlunbo" ).then(result=>{
+                var result=result.body
+                if (result.status===0){
+                    this.lunbolist=result.message
+                    Toast('加载轮播图成功')
+                }
+                else{
+                   Toast('加载轮播图失败')
+                }
+            })
+        }
     }
 }
 </script>
